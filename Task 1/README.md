@@ -18,6 +18,9 @@ You can create a simple Python script to accomplish this task:
 print("Hello, World! Welcome to Python Programming. Let's start coding!")
 ```
 
+### 🔗 Google Colab
+[Task 1 - Open in Google Colab](https://colab.research.google.com/drive/1Tzo2y_BMHioNXv2lc5SplrsfifDcyIBD?usp=sharing)
+
 ### 📌 How to Run the Code:
 1. Install Python if you haven’t already: [Download Python](https://www.python.org/downloads/)
 2. Open a terminal or command prompt.
@@ -29,5 +32,4 @@ print("Hello, World! Welcome to Python Programming. Let's start coding!")
    ```
 
 ### 🔥 Keep Coding and Stay Motivated! 🚀
-
 
