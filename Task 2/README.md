@@ -30,6 +30,10 @@ print(f"\n🔹 Processing... Name detected: {name}")
 print(f"🔹 Access Granted! Welcome, Agent {name}. Your mission awaits! 🚀")
 ```
 
+### 🔗 Google Colab
+[Task 2 - Open in Google Colab](https://colab.research.google.com/drive/1e2sBxP61_0qOfhDnYWoFANwuNahIiVf4?usp=sharing)
+
+
 ### 🚀 How to Run:
 1. Save the script as `secret_mission.py`.
 2. Open a terminal or command prompt.
