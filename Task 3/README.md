@@ -47,6 +47,8 @@ Enter second number: 7
 👉 **Looping for multiple calculations**  
 👉 **Error handling for invalid inputs**  
 
+### 🔗 Google Colab
+[Task 3 - Open in Google Colab](https://colab.research.google.com/drive/1FA4k9Cv_BgeTtiE2mPc341hxRtTvn4Z5?usp=sharing)
 
 
 ## 📆 Task Date  
