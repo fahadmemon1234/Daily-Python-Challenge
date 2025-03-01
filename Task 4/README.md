@@ -36,6 +36,10 @@ Enter a number: abc
 ✅ The program runs in a loop, allowing the user to check multiple numbers.
 ✅ It displays an error message for invalid inputs.
 
+### 🔗 Google Colab
+[Task 4 - Open in Google Colab](https://colab.research.google.com/drive/1gwouAI_hs5XMlkLdPx_3FmdLz57qAv_x?usp=sharing)
+
+
 ## 🤝 Contribution
 Feel free to fork this repository, improve the program, and submit a pull request!
 
