@@ -31,6 +31,11 @@ Congratulations! You guessed the correct number. 🎉
 ✅ Limit the number of attempts (e.g., max **7 attempts**).
 ✅ Display the correct answer if the user **fails** after max attempts.
 
+### 🔗 Google Colab
+[Task 5 - Open in Google Colab](https://colab.research.google.com/drive/1o_LC9XMEiHGxMOFSAVTppBErbJpfZv7S?usp=sharing)
+
+
+
 ## 🛠️ How to Run the Game:
 1. Install **Python** (if not installed) from [python.org](https://www.python.org/)
 2. Run the script using:
