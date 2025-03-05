@@ -47,6 +47,10 @@ Generated Passwords:
 - **Python** (or JavaScript, depending on implementation)
 - Random module for generating secure passwords
 
+### 🔗 Google Colab
+[Task 6 - Open in Google Colab](https://colab.research.google.com/drive/1KMEuR1i-QsJtqQJNi6ZSM5zGNFnX9Coz?usp=sharing)
+
+
 ## 🤝 Contributing
 Feel free to fork this repository, make improvements, and submit a pull request!
 
