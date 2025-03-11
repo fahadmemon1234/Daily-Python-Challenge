@@ -19,6 +19,10 @@ A simple interactive quiz game where users answer multiple-choice questions.
 3. Receive instant feedback on your choice.
 4. View your final score at the end of the game.
 
+### 🔗 Google Colab
+[Task 7 - Open in Google Colab](https://colab.research.google.com/drive/1YW1JaL-i28LKaeZ4RNQFvpICrQOFmzfp?usp=sharing)
+
+
 ## 📦 Installation & Usage
 1. Clone the repository:
    ```sh
