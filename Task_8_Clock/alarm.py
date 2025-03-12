@@ -1,12 +1,12 @@
 import time
 import streamlit as st
 import threading
-import pygame
+import pygame as game
 from playsound import playsound
 from datetime import datetime, timedelta
 
 # Initialize pygame mixer
-pygame.mixer.init()
+game.mixer.init()
 
 # Apply CSS for Better UI
 st.markdown(
@@ -49,9 +49,9 @@ alarm_active = False  # check if alarm is active
 
 # Function to Play Alarm Sound
 def play_alarm():
-    pygame.mixer.music.load("alarm.mp3")
-    pygame.mixer.music.play()  # Play the sound
-    while pygame.mixer.music.get_busy():  # until the music stops
+    game.mixer.music.load("alarm.mp3")
+    game.mixer.music.play()  # Play the sound
+    while game.mixer.music.get_busy():  # until the music stops
         time.sleep(1)
 
 
