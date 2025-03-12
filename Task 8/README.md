@@ -25,6 +25,11 @@ Set alarm time (HH:MM:SS): 07:30:00
 - `time` module for time management
 - `playsound` or `pygame` for playing the alarm sound
 
+
+### 🔗 Streamlit
+[Task 8 - Open in PRoject](https://alarm-clock.streamlit.app/)
+
+
 ## 🚀 How to Run
 1. Navigate to the project directory:
    ```sh
