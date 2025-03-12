@@ -42,11 +42,12 @@ alarm_time = st.time_input("Select Alarm Time", value=None)
 snooze_time = 5  # Default snooze time in minutes
 alarm_active = False  # Check if alarm is active
 
+online_custom_alarm_sound_input = st.text_input("Enter URL of Custom Alarm Sound", "https://www.soundjay.com/button/beep-07.wav") 
 
 # Function to Play Alarm Sound
 def play_alarm():
     try:
-        playsound("alarm.mp3")  # Play the sound
+        playsound(online_custom_alarm_sound_input)  # Play the sound
     except Exception as e:
         st.error(f"Error playing alarm sound: {e}")
 
