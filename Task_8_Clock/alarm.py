@@ -5,7 +5,7 @@ import pygame as game
 from playsound import playsound
 from datetime import datetime, timedelta
 
-# Initialize pygame mixer
+# Initialize pygame mixe
 game.mixer.init()
 
 # Apply CSS for Better UI
