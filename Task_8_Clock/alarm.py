@@ -2,7 +2,7 @@ import time
 import streamlit as st
 import threading
 import pygame
-import winsound
+from playsound import playsound
 from datetime import datetime, timedelta
 
 # Initialize pygame mixer
@@ -58,8 +58,7 @@ def play_alarm():
 # Function to Beep Sound
 def beep_alarm():
     for _ in range(3):  # Beep 3 times
-        winsound.Beep(1000, 500)
-        time.sleep(1)
+        playsound("beep.mp3")
 
 
 # Function to Check Alarm Time
