@@ -1,12 +1,8 @@
 import time
 import streamlit as st
 import threading
-import pygame as game
 from playsound import playsound
 from datetime import datetime, timedelta
-
-# Initialize pygame mixe
-game.mixer.init()
 
 # Apply CSS for Better UI
 st.markdown(
@@ -41,33 +37,37 @@ st.markdown('<p class="title">⏰ Advanced Alarm Clock</p>', unsafe_allow_html=T
 
 st.write("Set the alarm time (12-hour format)")
 
-# Input Field 
+# Input Field
 alarm_time = st.time_input("Select Alarm Time", value=None)
 snooze_time = 5  # Default snooze time in minutes
-alarm_active = False  # check if alarm is active
+alarm_active = False  # Check if alarm is active
 
 
 # Function to Play Alarm Sound
 def play_alarm():
-    game.mixer.music.load("alarm.mp3")
-    game.mixer.music.play()  # Play the sound
-    while game.mixer.music.get_busy():  # until the music stops
-        time.sleep(1)
+    try:
+        playsound("alarm.mp3")  # Play the sound
+    except Exception as e:
+        st.error(f"Error playing alarm sound: {e}")
 
 
 # Function to Beep Sound
 def beep_alarm():
-    for _ in range(3):  # Beep 3 times
-        playsound("beep.mp3")
+    try:
+        for _ in range(3):  # Beep 3 times
+            playsound("beep.mp3")
+            time.sleep(1)
+    except Exception as e:
+        st.error(f"Error playing beep sound: {e}")
 
 
 # Function to Check Alarm Time
 def check_alarm():
     global alarm_active
-    alarm_active = True  # alarm active
+    alarm_active = True  # Set alarm active
     while alarm_active:
-        current_time = datetime.now().strftime("%I:%M:%S %p")
-        if alarm_time and current_time == alarm_time.strftime("%I:%M:%S %p"):  
+        current_time = datetime.now().strftime("%I:%M %p")  # 12-hour format
+        if alarm_time and current_time == alarm_time.strftime("%I:%M %p"):
             st.markdown('<p class="success">⏰ Time\'s up! Wake up! 🔔</p>', unsafe_allow_html=True)
             threading.Thread(target=play_alarm).start()
             threading.Thread(target=beep_alarm).start()
@@ -80,7 +80,7 @@ def snooze_alarm():
     global alarm_time
     if alarm_time:
         new_alarm_time = (datetime.combine(datetime.today(), alarm_time) + timedelta(minutes=snooze_time)).time()
-        st.success(f"🔄 Snoozed! New alarm set for {new_alarm_time.strftime('%I:%M:%S %p')}")
+        st.success(f"🔄 Snoozed! New alarm set for {new_alarm_time.strftime('%I:%M %p')}")
         alarm_time = new_alarm_time
         threading.Thread(target=check_alarm).start()
 
@@ -88,7 +88,7 @@ def snooze_alarm():
 # Button to Set Alarm
 if st.button("Set Alarm", help="Click to activate alarm"):
     if alarm_time:
-        st.success(f"✅ Alarm set for {alarm_time.strftime('%I:%M:%S %p')}")
+        st.success(f"✅ Alarm set for {alarm_time.strftime('%I:%M %p')}")
         threading.Thread(target=check_alarm).start()
     else:
         st.error("⚠️ Please select a valid time!")
