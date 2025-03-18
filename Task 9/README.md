@@ -42,6 +42,10 @@ You are 25 years old. 🎉
    python main.py  # If using Python
    ```
 
+### 🔗 Streamlit
+[Task 9 - Open in PRoject](https://colab.research.google.com/drive/15yKe70ncg4NgJ0aF6j8N-so8oDV0Mu7O?usp=sharing)
+
+
 ### 🤝 Contributing:
 Feel free to fork this repository and submit pull requests with improvements!
 
